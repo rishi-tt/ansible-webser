@@ -1,0 +1,33 @@
+
+- name: Install and Configure Apache
+  hosts: webservers
+  become: yes
+  become_user: root
+
+  tasks:
+  - name: Install Apache
+    apt:
+      name: apache2
+      state: latest
+      update_cache: yes
+  - name: Enable service and start service
+    service:
+      name: apache2
+      enabled: yes
+      state: started
+  - name: Remove the existing index.html
+    file:
+      path: /var/www/html/index.html
+      state: absent
+  - name: Create a new empty index.html file
+    file:
+      path: /var/www/html/index.html
+      state: touch
+      owner: root
+      group: root
+      mode: 0755
+  - name: Add content to the index.html file
+    lineinfile:
+      path: /var/www/html/index.html
+      line: Hello Ansible World!  
+
