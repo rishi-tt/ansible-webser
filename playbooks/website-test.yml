@@ -59,8 +59,8 @@
   - name: Confirm that vars.html exists & is owned by root
     assert:
       that:
-        - "a.stat.exists"
-        - "a.stat.pw_name == 'root'"
+        - "v.stat.exists"
+        - "v.stat.pw_name == 'root'"
       fail_msg: "vars.html may not exist or have correct ownership!"
       success_msg: "vars.html exists with proper ownership"
 

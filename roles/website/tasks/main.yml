@@ -7,8 +7,8 @@
   copy:
     src: vars.html
     dest: "{{ file_path }}/vars.html"
-    owner: ubuntu
-    group: ubuntu
+    owner: root
+    group: root
     mode: 0755
 
 - name: Add a link from index.html to vars.html
