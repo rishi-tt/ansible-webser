@@ -1,4 +1,5 @@
 pipeline {
+    WORKSPACE=/opt/jenkins/workspace
     agent {label "agentfarm"}
     stages {
         stage('Delete the workspace') {
