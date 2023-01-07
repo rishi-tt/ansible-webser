@@ -7,9 +7,10 @@ pipeline {
 	    }
 	}
 	
-	stage('Second Stage') {
+	stage('Installing Ansible') {
 	    steps {
-	      echo "Second stage"
+	      sh 'sudo apt-get update -y && sudo apt-get upgrade -y'
+	      sh 'sudo apt install -y wget tree unzip ansible python3-pip python3-apt'
  
 	      }
 	}
