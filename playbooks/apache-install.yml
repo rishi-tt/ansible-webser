@@ -1,6 +1,6 @@
 
 - name: Install and Configure Apache
-  hosts: web01
+  hosts: webservers
   become: yes
   become_user: root
 
