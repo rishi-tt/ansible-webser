@@ -1,4 +1,4 @@
-
+---
 - name: Install and Configure Apache
   hosts: webservers
   become: yes
