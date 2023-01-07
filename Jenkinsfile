@@ -1,7 +1,7 @@
 pipeline{
     agent {label "agentfarm"}
     environment{
-        KEY_FILE = '/home/ubuntu/.ssh/vm-instance-key.pem'
+        KEY_FILE = '/home/ubuntu/.ssh/key.pem'
         USER = 'ubuntu'
     }
     stages{
