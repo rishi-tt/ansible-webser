@@ -1,4 +1,4 @@
 webservers:
   hosts:
     web01:
-       ansible_host: 54.197.201.166
+       ansible_host: 52.3.221.91
